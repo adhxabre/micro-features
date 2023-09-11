@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
+import { faImage, faTemperatureFull } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -13,13 +13,21 @@ export default function Home() {
           <h1 className="text-white text-3xl text-center font-bold">
             Micro-Features
           </h1>
-          <div className="p-10 flex gap-5 justify-center items-start">
+          <div className="p-10 flex flex-col gap-5 justify-start items-center">
             <Link
               to="/degree-converter"
               className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
             >
               <h1 className="text-center">
                 Degree Converter <FontAwesomeIcon icon={faTemperatureFull} />
+              </h1>
+            </Link>
+            <Link
+              to="/meme-generator"
+              className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+            >
+              <h1 className="text-center">
+                Meme Generator <FontAwesomeIcon icon={faImage} />
               </h1>
             </Link>
           </div>

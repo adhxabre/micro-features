@@ -88,8 +88,8 @@ export default function DegreeComponent() {
                   />
                 </div>
               </div>
-              <div className="w-full h-full flex-1 flex justify-center items-center p-10 text-8xl text-white font-medium">
-                <h1>{fahrenheit1} F°</h1>
+              <div className="w-full h-full flex-1 flex justify-center items-center p-10 text-6xl text-white font-medium">
+                <h1 className="truncate w-80 text-center">{fahrenheit1} F°</h1>
               </div>
             </div>
             <div className="w-full h-full flex-1 flex text-white">
@@ -122,8 +122,8 @@ export default function DegreeComponent() {
                   />
                 </div>
               </div>
-              <div className="w-full h-full flex-1 flex justify-center items-center p-10 text-8xl text-white font-medium">
-                <h1 className="truncate w-60">{celcius2} C°</h1>
+              <div className="w-full h-full flex-1 flex justify-center items-center p-10 text-6xl text-white font-medium">
+                <h1 className="truncate w-80 text-center">{celcius2} C°</h1>
               </div>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function DegreeComponent() {
             <img
               src={images[status]}
               alt="meme"
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-xl object-cover"
             />
           </div>
         </div>
