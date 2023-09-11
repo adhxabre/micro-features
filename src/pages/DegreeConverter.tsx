@@ -10,11 +10,11 @@ export default function DegreeComponent() {
     "https://media.tenor.com/C6sWJAK3V4sAAAAC/spongebob-squarepants-spongebob.gif",
   ];
 
-  const [status, setStatus] = React.useState(0);
-  const [celcius1, setCelcius1] = React.useState(34);
-  const [celcius2, setCelcius2] = React.useState(0);
-  const [fahrenheit1, setFahrenheit1] = React.useState(0);
-  const [fahrenheit2, setFahrenheit2] = React.useState(32);
+  const [status, setStatus] = React.useState<number>(0);
+  const [celcius1, setCelcius1] = React.useState<number>(34);
+  const [celcius2, setCelcius2] = React.useState<number>(0);
+  const [fahrenheit1, setFahrenheit1] = React.useState<number>(0);
+  const [fahrenheit2, setFahrenheit2] = React.useState<number>(32);
 
   function celciusToFahrenheit() {
     return setFahrenheit1((celcius1 * 9) / 5 + 32);
@@ -71,7 +71,7 @@ export default function DegreeComponent() {
                     placeholder="Celcius"
                     className="input input-bordered w-full max-w-xs"
                     value={celcius1}
-                    onChange={(e) => setCelcius1(e.target.value)}
+                    onChange={(e) => setCelcius1(parseFloat(e.target.value))}
                   />
                 </div>
                 <div className="form-control w-full max-w-xs">
@@ -118,7 +118,7 @@ export default function DegreeComponent() {
                     placeholder="Fahrenheit"
                     className="input input-bordered w-full max-w-xs"
                     value={fahrenheit2}
-                    onChange={(e) => setFahrenheit2(e.target.value)}
+                    onChange={(e) => setFahrenheit2(parseFloat(e.target.value))}
                   />
                 </div>
               </div>
