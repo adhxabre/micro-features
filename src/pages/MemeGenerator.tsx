@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function MemeGenerator() {
   const [isMeme, setIsMeme] = React.useState<string>("");
@@ -58,7 +58,79 @@ export default function MemeGenerator() {
             </p>
           )}
         </div>
+        <p className="text-white text-xl absolute z-[8888] bottom-0 right-0 mb-10 mr-10">
+          What should you do! <FontAwesomeIcon icon={faArrowDown} />
+        </p>
       </div>
+      <section id="todo" className="w-full h-[60vh] bg-slate-800 p-20">
+        <h1 className="text-center text-white text-4xl font-bold">
+          What should you do!
+        </h1>
+        <div className="overflow-x-auto w-1/2 mx-auto mt-10">
+          <table className="table">
+            <thead>
+              <tr className="text-center">
+                <th></th>
+                <th>Topic</th>
+                <th>Explanation</th>
+                <th>Is Done</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>1</th>
+                <td>Fetch API</td>
+                <td>
+                  Know how to getting data from an API and render it on
+                  client-side
+                </td>
+                <td className="flex justify-center">
+                  <input type="checkbox" className="checkbox" />
+                </td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Function</td>
+                <td>
+                  Know how to create a function that runs a commands we need to
+                  execute, specifically to get a data
+                </td>
+                <td className="flex justify-center">
+                  <input type="checkbox" className="checkbox" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section className="w-full h-[40vh] bg-slate-900 p-10 flex flex-col">
+        <h1 className="text-center text-4xl text-white font-semibold">
+          Submit your task here!
+        </h1>
+        <form className="w-full flex justify-center gap-10 my-auto">
+          <div className="form-control w-full">
+            <label className="label">Github Repository Link</label>
+            <input
+              type="text"
+              placeholder="https://github.com/xxxxx/meme-generator"
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control w-full">
+            <label className="label">Vercel Link</label>
+            <input
+              type="text"
+              placeholder="https://xxxxx.vercel.app/"
+              className="input input-bordered w-full"
+            />
+          </div>
+          <div className="form-control">
+            <button type="submit" className="btn btn-neutral mt-auto w-60">
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
       <footer className="w-full p-1 m-1 flex justify-center items-center z-[9999] bottom-0 fixed text-slate-950">
         <Link to="https://github.com/adhxabre">
           <h1 className="w-auto h-auto px-3 py-1 rounded-2xl bg-white border-2 border-white ease-out duration-200 hover:scale-110 hover:text-white hover:bg-transparent">
