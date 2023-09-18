@@ -9,7 +9,11 @@ export default function CurrencyConverter() {
   const [toCurrency, setToCurrency] = React.useState("usd");
   const [result, setResult] = React.useState("");
 
-  const exchangeRates = {
+  interface CurrencyRates {
+    [key: string]: { [key: string]: number };
+  }
+
+  const exchangeRates: CurrencyRates = {
     usd: {
       eur: 0.85,
       gbp: 0.75,

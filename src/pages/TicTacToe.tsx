@@ -1,4 +1,3 @@
-import { height } from "@fortawesome/free-brands-svg-icons/fa42Group";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -10,7 +9,7 @@ export default function TicTacToe() {
 
   const winner = calculateWinner(board);
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => {
     if (winner || board[index]) return;
 
     const newBoard = [...board];
@@ -19,7 +18,7 @@ export default function TicTacToe() {
     setXIsNext(!xIsNext);
   };
 
-  const renderSquare = (index) => {
+  const renderSquare = (index: number) => {
     return (
       <button
         className="btn btn-neutral w-20 h-20 text-white text-2xl text-center font-bold"
@@ -177,7 +176,7 @@ export default function TicTacToe() {
   );
 }
 
-const calculateWinner = (squares) => {
+const calculateWinner = (squares: string[]) => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],

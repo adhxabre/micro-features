@@ -85,6 +85,22 @@ export default function CountdownTimer() {
     });
   };
 
+  const days: { [key: string]: string | undefined } = {
+    "--value": timeRemaining?.days.toString(),
+  };
+
+  const hours: { [key: string]: string | undefined } = {
+    "--value": timeRemaining?.hours.toString(),
+  };
+
+  const minutes: { [key: string]: string | undefined } = {
+    "--value": timeRemaining?.minutes.toString(),
+  };
+
+  const seconds: { [key: string]: string | undefined } = {
+    "--value": timeRemaining?.seconds.toString(),
+  };
+
   return (
     <React.Fragment>
       <header className="bg-gray-700 z-[9999] top-0 fixed w-full h-auto py-2 px-20">
@@ -135,25 +151,25 @@ export default function CountdownTimer() {
               <div className="flex gap-5">
                 <div>
                   <span className="countdown font-mono text-4xl">
-                    <span style={{ "--value": timeRemaining?.days }}></span>
+                    <span style={days}></span>
                   </span>
                   days
                 </div>
                 <div>
                   <span className="countdown font-mono text-4xl">
-                    <span style={{ "--value": timeRemaining?.hours }}></span>
+                    <span style={hours}></span>
                   </span>
                   hours
                 </div>
                 <div>
                   <span className="countdown font-mono text-4xl">
-                    <span style={{ "--value": timeRemaining?.minutes }}></span>
+                    <span style={minutes}></span>
                   </span>
                   min
                 </div>
                 <div>
                   <span className="countdown font-mono text-4xl">
-                    <span style={{ "--value": timeRemaining?.seconds }}></span>
+                    <span style={seconds}></span>
                   </span>
                   sec
                 </div>
