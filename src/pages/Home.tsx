@@ -5,14 +5,20 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown19,
+  faCalculator,
+  faChess,
+  faClock,
+  faCoins,
+  faGamepad,
   faImage,
+  faPenToSquare,
   faTemperatureFull,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
     <React.Fragment>
-      <div className="bg-slate-900 w-full h-screen flex justify-center items-center">
+      <div className="bg-slate-900 w-full min-h-screen h-min flex justify-center items-center">
         <div className="w-3/4 h-3/4 bg-slate-800 rounded-2xl p-10">
           <h1 className="text-white text-3xl text-center font-bold">
             Micro-Features
@@ -64,7 +70,115 @@ export default function Home() {
                 </p>
               </div>
               <Link
-                to="/number-guess"
+                to="/"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">In Progress</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  Currency Converter <FontAwesomeIcon icon={faCoins} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-orange-500 font-bold">Medium</span>,
+                  React (JavaScript), Function, Logic, Conditional Rendering
+                </p>
+              </div>
+              <Link
+                to="/currency-converter"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">Solve Challenge</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  Salary Calculator <FontAwesomeIcon icon={faCalculator} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-green-500 font-bold">Easy</span>, React
+                  (JavaScript), Function, Logic, Conditional Rendering
+                </p>
+              </div>
+              <Link
+                to="/salary-calculator"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">Solve Challenge</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  Word Scramble <FontAwesomeIcon icon={faPenToSquare} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-green-500 font-bold">Easy</span>, React
+                  (JavaScript), Function, Logic, Conditional Rendering
+                </p>
+              </div>
+              <Link
+                to="/word-scramble"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">Solve Challenge</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  Mobile Legend <FontAwesomeIcon icon={faGamepad} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-red-500 font-bold">Hard</span>, React
+                  (JavaScript), Variable & DOM, Function, Logic, Conditional
+                  Rendering, Fetch API, Operator, Looping, Event Listener
+                  (Callback)
+                </p>
+              </div>
+              <Link
+                to="/mobile-legend"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">Solve Challenge</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  Countdown Timer <FontAwesomeIcon icon={faClock} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-red-500 font-bold">Hard</span>, React
+                  (JavaScript), Variable & DOM, Function, Logic, Conditional
+                  Rendering, Fetch API, Operator, Looping, Event Listener
+                  (Callback)
+                </p>
+              </div>
+              <Link
+                to="/countdown-timer"
+                className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
+              >
+                <h1 className="text-center">Solve Challenge</h1>
+              </Link>
+            </div>
+            <div className="w-full flex justify-between p-3 border border-slate-300 rounded-2xl">
+              <div className="w-full h-full">
+                <h1 className="text-white text-md font-semibold">
+                  TicTacToe <FontAwesomeIcon icon={faChess} />
+                </h1>
+                <p className="text-white text-sm font-light">
+                  <span className="text-red-500 font-bold">Hard</span>, React
+                  (JavaScript), Variable & DOM, Function, Logic, Conditional
+                  Rendering, Fetch API, Operator, Looping, Event Listener
+                  (Callback)
+                </p>
+              </div>
+              <Link
+                to="/countdown-timer"
                 className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
               >
                 <h1 className="text-center">Solve Challenge</h1>
