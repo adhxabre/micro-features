@@ -178,7 +178,7 @@ export default function Home() {
                 </p>
               </div>
               <Link
-                to="/countdown-timer"
+                to="/tic-tac-toe"
                 className="bg-slate-600 border-2 border-slate-600 w-80 p-2 text-white font-normal rounded-full ease-out duration-200 hover:scale-105 hover:bg-transparent"
               >
                 <h1 className="text-center">Solve Challenge</h1>
